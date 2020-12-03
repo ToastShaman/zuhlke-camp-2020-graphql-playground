@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "e705842e-2e13-428a-bf1f-932861b40020",
+		"name": "GraphQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get By Id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n    todo(id: \"-MNd1ArogFvP0Urhx8gB\") {\n        rev\n        text\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\n    todo(item: {\n    id: \"-MNdDf0b9krjeMY9e81j\",\n    rev: \"-MNdDf0b9krjeMY9e81k\",\n    text: \"Don't forget the milk\",\n    status: \"TODO\",\n    category: \"shopping\",\n    tags: [\n        \"groceries\",\n        \"food\"\n    ]\n}) {\n        rev\n        text\n    }\n}\n",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
