@@ -1,7 +1,0 @@
-POST http://localhost:8080/graphql
-Content-Type: application/graphql
-
-{
-    test
-    name
-}
