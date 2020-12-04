@@ -12,7 +12,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 
-@Provider("todo_api")
+@Provider("MyProvider")
 @PactFolder("pacts")
 @ExtendWith(PactVerificationInvocationContextProvider.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -31,7 +31,7 @@ public class ProviderTest {
         context.verifyInteraction();
     }
 
-    @State("an empty repository")
-    public void emptyRepositoryState() {
+    @State("User foo exists")
+    public void fooExists() {
     }
 }

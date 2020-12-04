@@ -1,0 +1,53 @@
+{
+  "consumer": {
+    "name": "MyConsumer"
+  },
+  "provider": {
+    "name": "MyProvider"
+  },
+  "interactions": [
+    {
+      "description": "A request to get foo",
+      "providerState": "User foo exists",
+      "request": {
+        "method": "POST",
+        "path": "/graphql",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/graphql"
+        },
+        "body": "\nquery {\n\ttodo(id: \"-MNhTBP95ZiBQTNtPzNJ\") {\n\t\tid\n\t\trev\n\t\ttext\n\t\tstatus\n\t\tcategory\n\t\ttags\n\t}\n}\n"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "data": {
+            "todo": {
+              "id": "",
+              "rev": "",
+              "text": "",
+              "status": "",
+              "category": "",
+              "tags": [
+
+              ]
+            }
+          }
+        },
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
